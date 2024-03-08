@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto;
+}
+
+#navigation-box {
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    padding: 0 1rem;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.banner {
+    margin-bottom: 2rem;
+}
+
+.banner img {
+    display: block;
+    max-width: 5rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.banner h2 {
+    text-align: center;
+}
+
+.banner p {
+    text-align: center;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.product img{
+    display: block;
+    max-width: 5rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.product h2 {
+    text-align: center;
+}
+
+.product p {
+    text-align: center;
+}
+
+#product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
+}
+
+.product:hover {
+    border-color: #aaa;
+    position: relative;
+}
+
+.product:hover::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+#footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 1rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    #product-gallery {
+        grid-template-columns: 1fr;
+    }
+    #footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    #social-icons {
+        margin-top: 1rem;
+    }
+}
