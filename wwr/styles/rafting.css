@@ -121,6 +121,7 @@ footer img {
     height: 5vh;
     width: auto;
     color: var(--primary-color);
+    text-decoration: none;
 }
 
 footer nav {
@@ -130,4 +131,5 @@ footer nav {
 
 footer a {
     display: block;
+    text-decoration: none;
 }
