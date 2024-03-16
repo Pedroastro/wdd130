@@ -59,31 +59,24 @@ p {
     height: auto;
 }
 
-.hero h1 {
+.hero article {
     position: absolute;
     display: block;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 25%;
     background-color: rgba(15, 28, 32, 0.6);
     color: var(--accent1-color);
 }
 
-.hero article {
-    position: absolute;
-    display: block;
-    top: 40%;
-    background-color: rgba(15, 28, 32, 0.6)
+.hero h1 {
+    text-align: center;
+    margin: 2% auto;
+    color: var(--accent1-color);
 }
 
 .hero article img {
     float: right;
     width: 20%;
     margin: 5% 5%;
-}
-
-.hero article p {
-    color: var(--accent1-color);
 }
 
 header nav {
