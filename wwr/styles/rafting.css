@@ -38,17 +38,34 @@ header {
 header nav {
     display: flex;
     flex-wrap: wrap;
-    grid-column: 1fr;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--nav-background-color);
 }
 
 header nav a {
     font-size: calc(0.7 * (1.6vw + 0.9vh));
 }
 
+nav a {
+    display: block;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding: 1rem;
+    margin: auto 1rem;
+}
+
+nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+}
+
+header nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
 #logo {
-    grid-column: 1fr;
     width: 100%;
     height: auto;
     margin: 0;
@@ -121,31 +138,6 @@ p {
     margin: 5% 5%;
 }
 
-header nav {
-    background-color: var(--nav-background-color);
-    font-size: 1.2rem;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-nav a {
-    display: block;
-    color: var(--nav-link-color);
-    text-decoration: none;
-    padding: 1rem;
-    margin: auto 1rem;
-}
-
-nav a:link, nav a:visited {
-    color: var(--nav-link-color);
-}
-
-header nav a:hover {
-    color: var(--nav-hover-link-color);
-    background-color: var(--nav-hover-background-color);
-}
-
 #adventures {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -156,7 +148,6 @@ header nav a:hover {
 
 #adventures figure {
     display: grid;
-    grid-row: 80% 20%;
     align-items: center;
     justify-items: center;
     text-align: center;
