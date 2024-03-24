@@ -29,23 +29,64 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-    display: flex;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: 7vw repeat(auto-fit, minmax(10vw, 1fr));
     background-color: var(--primary-color);
     padding: 2vh;
 }
 
 header nav {
-    margin: auto 10%;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1fr;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header nav a {
+    font-size: calc(0.7 * (1.6vw + 0.9vh));
 }
 
 #logo {
-    height: 10vh;
-    width: auto;
+    grid-column: 1fr;
+    width: 100%;
+    height: auto;
     margin: 0;
 }
 
+#logolink {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+}
+
+#history-img {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#history {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 30% 40% 30%;
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: center;
+    align-items: center;
+}
+
+#history h2 {
+    text-align: center;
+    grid-column: span 3;
+}
+
 p {
+    font-size: calc(0.5 * (1.6vw + 0.9vh));
     padding: 25px;
 }
 
@@ -71,6 +112,7 @@ p {
     text-align: center;
     margin: 2% auto;
     color: var(--accent1-color);
+    font-size: calc(0.9 * (1.6vw + 0.9vh));
 }
 
 .hero article img {
@@ -104,6 +146,32 @@ header nav a:hover {
     background-color: var(--nav-hover-background-color);
 }
 
+#adventures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    align-items: center;
+    justify-items: center;
+}
+
+#adventures figure {
+    display: grid;
+    grid-row: 80% 20%;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+figcaption {
+    font-size: calc(0.5 * (1.6vw + 0.9vh));
+}
+
+section h2 {
+    display: block;
+    text-align: center;
+    font-size: calc(0.9 * (1.6vw + 0.9vh));
+}
+
 section img {
     width: 10vw;
     height: auto;
@@ -112,24 +180,35 @@ section img {
 
 footer {
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
     justify-content: center;
-    margin: 0 auto;
+    align-items: center;
+}
+
+footer p {
+    padding: 0 10vw;
 }
 
 footer img {
-    height: 5vh;
-    width: auto;
+    width: 2vw;
+    height: auto;
     color: var(--primary-color);
     text-decoration: none;
 }
 
 footer nav {
     display: flex;
-    margin: 0 auto;
+    width: 20vw;
+    margin: 5vh auto;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 footer a {
-    display: block;
     text-decoration: none;
+    margin: 0 5%;
+    padding: 0;
+    width: fit-content;
+    height: auto;
 }
